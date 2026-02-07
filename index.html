@@ -33,6 +33,18 @@
     <div class="last-page" id="lastPage">
         <span>See you on Feb 14, Cyrene! ❤️</span>
         <img src="heart.gif" alt="Hi" class="gif">
+        <button class="button" onclick="downloadFile()">See you!</button>
     </div>
+    <script>
+    function downloadFile() {
+        const fileUrl = "https://drive.google.com/uc?export=download&id=1gmrrQ0NiaP2StXvOoi_SHtgP9-k2hoEs";
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = "MyDriveFile";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    </script>
 </body>
 </html>
